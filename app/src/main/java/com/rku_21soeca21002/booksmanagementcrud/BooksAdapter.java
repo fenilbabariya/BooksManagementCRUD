@@ -1,5 +1,6 @@
 package com.rku_21soeca21002.booksmanagementcrud;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.Context;
@@ -59,6 +60,7 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BooksViewHol
                 intent.putExtra("price",price);
                 intent.putExtra("author",author);
                 context.startActivity(intent);
+                ((Activity)context).finish();
             }
         });
 
@@ -76,6 +78,7 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BooksViewHol
                                 db.delete(DBHelper.DB_TABLE,"id=?",new String[]{""+id});
                                 Toast.makeText(context,"Deleted",Toast.LENGTH_SHORT).show();
                                 context.startActivity(new Intent(context,context.getClass()));
+                                ((Activity)context).finish();
                             }
                         })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {

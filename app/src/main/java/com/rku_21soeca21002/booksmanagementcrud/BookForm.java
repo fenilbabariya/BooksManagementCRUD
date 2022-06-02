@@ -55,4 +55,9 @@ public class BookForm extends AppCompatActivity {
         startActivity(new Intent(BookForm.this,MainActivity.class));
         finish();
     }
+
+    public void btnCancle(View view) {
+        startActivity(new Intent(BookForm.this,MainActivity.class));
+        finish();
+    }
 }

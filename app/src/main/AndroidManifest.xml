@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BooksManagementCRUD">
-        <activity android:name=".BookForm" android:label="Book Form" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".BookForm" android:label="Book Form" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
